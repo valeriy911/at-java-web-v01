@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.*;
 public class NavigationTests {
     @Test
-    void test_navigation() {
+    void testNavigation() {
         open("https://ya.ru/");
         sleep(10_000);
         open("https://ru.wikipedia.org");
