@@ -1,9 +1,13 @@
 package work.part03;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.Test;
 
 
+import java.time.Duration;
+
+import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
@@ -37,8 +41,12 @@ public class IFrameTest {
         open("https://demoqa.com/frames");
         sleep(3000);
         getWebDriver().manage().window().maximize();
+
+
         switchTo().frame($x("//iframe[@id='frame1']"));
         $("#sampleHeading").shouldHave(text("This is a sample page"));
+        $x("//h1[contains(.,'This is a sample page')]").shouldBe(exist, Duration.ofSeconds(10));
+
         switchTo().defaultContent();
         $x("//header/a").click();
         sleep(3000);
