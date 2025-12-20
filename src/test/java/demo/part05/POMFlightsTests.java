@@ -3,10 +3,10 @@ package demo.part05;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import org.junit.jupiter.api.*;
-import pages.FlightsListPage;
-import pages.LoginPage;
-import pages.RegistrationPage;
-import pages.SearchPage;
+import demo.part05.FlightsListPage;
+import demo.part05.LoginPage;
+import demo.part05.RegistrationPage;
+import demo.part05.SearchPage;
 // ... Остальные импорты
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;

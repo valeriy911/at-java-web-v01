@@ -1,0 +1,225 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:44), pid=10500, tid=10620
+#
+# JRE version:  (21.0.9+7) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (21.0.9+7-LTS-338, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dallure.results.directory=C:\IDEA\IdeaProjects\at-java-web-v01\build\allure-results -Djunit.jupiter.extensions.autodetection.enabled=true -Dorg.gradle.internal.worker.tmpdir=C:\IDEA\IdeaProjects\at-java-web-v01\build\tmp\test\work -javaagent:C:\IDEA\Settings\caches\modules-2\files-2.1\org.aspectj\aspectjweaver\1.9.22.1\bca243d0af0db4758fbae45c5f4995cb5dabb612\aspectjweaver-1.9.22.1.jar -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=RU -Duser.language=ru -Duser.variant -ea worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 11'
+
+Host: Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz, 8 cores, 7G,  Windows 10 , 64 bit Build 17763 (10.0.17763.7009)
+Time: Sat Dec 20 14:15:42 2025 RTZ 2 (зима) elapsed time: 0.006486 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001feaf1bea80):  JavaThread "Unknown thread" [_thread_in_vm, id=10620, stack(0x00000047cdd00000,0x00000047cde00000) (1024K)]
+
+Stack: [0x00000047cdd00000,0x00000047cde00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6cbf89]
+V  [jvm.dll+0x858421]
+V  [jvm.dll+0x85a94e]
+V  [jvm.dll+0x85b023]
+V  [jvm.dll+0x27ebc6]
+V  [jvm.dll+0xbfae7]
+V  [jvm.dll+0x326b85]
+V  [jvm.dll+0x8216fd]
+V  [jvm.dll+0x3bc481]
+V  [jvm.dll+0x80a9b8]
+V  [jvm.dll+0x45166e]
+V  [jvm.dll+0x453261]
+C  [jli.dll+0x52a3]
+C  [ucrtbase.dll+0x2268a]
+C  [KERNEL32.DLL+0x17ac4]
+C  [ntdll.dll+0x5a8c1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007fff1073fc08, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+Total: 0
+
+Other Threads:
+
+=>0x000001feaf1bea80 (exited) JavaThread "Unknown thread"    [_thread_in_vm, id=10620, stack(0x00000047cdd00000,0x00000047cde00000) (1024K)]
+Total: 1
+
+Threads with active compile tasks:
+Total: 0
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000000000000, size: 0 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 5 size 8 Array Of Cards #cards 12 size 40 Howl #buckets 4 coarsen threshold 1843 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 2048
+
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.004 Loaded shared library C:\Program Files\Java\jdk-21\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+ZGC Phase Switch (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff764fe0000 - 0x00007ff764ff0000 	C:\Program Files\Java\jdk-21\bin\java.exe
+0x00007fff66ae0000 - 0x00007fff66cce000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007fff64860000 - 0x00007fff64913000 	C:\Windows\System32\KERNEL32.DLL
+0x00007fff63910000 - 0x00007fff63bae000 	C:\Windows\System32\KERNELBASE.dll
+0x00007fff637f0000 - 0x00007fff638ea000 	C:\Windows\System32\ucrtbase.dll
+0x00007fff4a4f0000 - 0x00007fff4a50b000 	C:\Program Files\Java\jdk-21\bin\VCRUNTIME140.dll
+0x00007fff506d0000 - 0x00007fff506e9000 	C:\Program Files\Java\jdk-21\bin\jli.dll
+0x00007fff64270000 - 0x00007fff64319000 	C:\Windows\System32\ADVAPI32.dll
+0x00007fff645d0000 - 0x00007fff6466e000 	C:\Windows\System32\msvcrt.dll
+0x00007fff66250000 - 0x00007fff662f2000 	C:\Windows\System32\sechost.dll
+0x00007fff63d00000 - 0x00007fff63e1b000 	C:\Windows\System32\RPCRT4.dll
+0x00007fff63540000 - 0x00007fff63566000 	C:\Windows\System32\bcrypt.dll
+0x00007fff64b50000 - 0x00007fff64ce7000 	C:\Windows\System32\USER32.dll
+0x00007fff63570000 - 0x00007fff63590000 	C:\Windows\System32\win32u.dll
+0x00007fff640e0000 - 0x00007fff64109000 	C:\Windows\System32\GDI32.dll
+0x00007fff4dc60000 - 0x00007fff4ded9000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17763.8146_none_de716818534b28f7\COMCTL32.dll
+0x00007fff63590000 - 0x00007fff6373c000 	C:\Windows\System32\gdi32full.dll
+0x00007fff62b30000 - 0x00007fff62bd0000 	C:\Windows\System32\msvcp_win.dll
+0x00007fff66780000 - 0x00007fff66aab000 	C:\Windows\System32\combase.dll
+0x00007fff63bb0000 - 0x00007fff63c32000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007fff5be70000 - 0x00007fff5be7a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007fff63ef0000 - 0x00007fff63f1e000 	C:\Windows\System32\IMM32.DLL
+0x00007fff506c0000 - 0x00007fff506cc000 	C:\Program Files\Java\jdk-21\bin\vcruntime140_1.dll
+0x00007fff2ff10000 - 0x00007fff2ff9e000 	C:\Program Files\Java\jdk-21\bin\msvcp140.dll
+0x00007fff0fb70000 - 0x00007fff1088d000 	C:\Program Files\Java\jdk-21\bin\server\jvm.dll
+0x00007fff62ad0000 - 0x00007fff62b2d000 	C:\Windows\System32\POWRPROF.dll
+0x00007fff64560000 - 0x00007fff645cd000 	C:\Windows\System32\WS2_32.dll
+0x00007fff5b570000 - 0x00007fff5b594000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007fff5ad10000 - 0x00007fff5ad3d000 	C:\Windows\SYSTEM32\winmmbase.dll
+0x00007fff63cb0000 - 0x00007fff63cfa000 	C:\Windows\System32\cfgmgr32.dll
+0x00007fff62a60000 - 0x00007fff62a71000 	C:\Windows\System32\kernel.appcore.dll
+0x00007fff4a4e0000 - 0x00007fff4a4ea000 	C:\Program Files\Java\jdk-21\bin\jimage.dll
+0x00007fff5d7a0000 - 0x00007fff5d98d000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007fff47e30000 - 0x00007fff47e5a000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007fff4a4d0000 - 0x00007fff4a4df000 	C:\Program Files\Java\jdk-21\bin\instrument.dll
+0x00007fff4a4b0000 - 0x00007fff4a4cf000 	C:\Program Files\Java\jdk-21\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-21\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17763.8146_none_de716818534b28f7;C:\Program Files\Java\jdk-21\bin\server
+
+VM Arguments:
+jvm_args: -Dallure.results.directory=C:\IDEA\IdeaProjects\at-java-web-v01\build\allure-results -Djunit.jupiter.extensions.autodetection.enabled=true -Dorg.gradle.internal.worker.tmpdir=C:\IDEA\IdeaProjects\at-java-web-v01\build\tmp\test\work -javaagent:C:\IDEA\Settings\caches\modules-2\files-2.1\org.aspectj\aspectjweaver\1.9.22.1\bca243d0af0db4758fbae45c5f4995cb5dabb612\aspectjweaver-1.9.22.1.jar -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=RU -Duser.language=ru -Duser.variant -ea 
+java_command: worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 11'
+java_class_path (initial): C:\\IDEA\\Settings\\caches\\8.14\\workerMain\\gradle-worker.jar;C:\\IDEA\\IdeaProjects\\at-java-web-v01\\build\\classes\\java\\test;C:\\IDEA\\IdeaProjects\\at-java-web-v01\\build\\resources\\test;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.junit.jupiter\\junit-jupiter-engine\\5.11.4\\dc10ec209623986a68ea07f67cdc7d2a65a60355\\junit-jupiter-engine-5.11.4.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.junit.jupiter\\junit-jupiter-params\\5.11.4\\e4c86fbe2a39c60c6b87260ef7f7e7c1a1906481\\junit-jupiter-params-5.11.4.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\io.qameta.allure\\allure-junit5\\2.29.0\\68b8307150b9da7f5f61f6b80736f39e6d453574\\allure-junit5-2.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\io.qameta.allure\\allure-junit-platform\\2.29.0\\8e6c5904d1c078f47269ee4968825263133e265b\\allure-junit-platform-2.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.junit.jupiter\\junit-jupiter-api\\5.11.4\\308315b28e667db4091b2ba1f7aa220d1ddadb97\\junit-jupiter-api-5.11.4.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.junit.platform\\junit-platform-launcher\\1.11.4\\3d83c201899d8c5e74e1a5d628eab900342a0e48\\junit-platform-launcher-1.11.4.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.junit.platform\\junit-platform-engine\\1.11.4\\21f61b123ad6ac8f7e73971bff3a096c8d8e1cd0\\junit-platform-engine-1.11.4.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.junit.platform\\junit-platform-commons\\1.11.4\\8898eea3ed0da2641548d602c3e308804f166303\\junit-platform-commons-1.11.4.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.junit.jupiter\\junit-jupiter\\5.11.4\\a699f024a4a4706b36bddbeb42d499aff9e09379\\junit-jupiter-5.11.4.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\com.codeborne\\selenide\\7.7.3\\8d5958ecc532c5b17983e6be7568ebb445ff246a\\selenide-7.7.3.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\io.qameta.allure\\allure-selenide\\2.29.0\\a986d9e88d97c2d3d3e48fae69f91e348a2e372f\\allure-selenide-2.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.slf4j\\slf4j-simple\\2.0.12\\5fb15030fb6158ef4f63ce4f889f72f4259a7bc3\\slf4j-simple-2.0.12.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\com.codeborne\\selenide-core\\7.7.3\\cdc2ade0884df10b646e53f9a19224a89574f73a\\selenide-core-7.7.3.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-java\\4.29.0\\2cc38c8dbef9d6e8774f05c2d2e8088180858ed4\\selenium-java-4.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-chrome-driver\\4.29.0\\b88cebcf7333d13be0ac5d9ca140ff9fc99b1f8e\\selenium-chrome-driver-4.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-devtools-v131\\4.29.0\\9071645ff0b06bd25bb6aeafa31eeda8e0e524b8\\selenium-devtools-v131-4.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-devtools-v132\\4.29.0\\93cafcd500b82cae6d05cf002bdcad9cb296926b\\selenium-devtools-v132-4.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-devtools-v133\\4.29.0\\8074d99433372b81d7ce78d69d61869c27802486\\selenium-devtools-v133-4.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-devtools-v85\\4.29.0\\786a93d6de154df7c02afc77888a14b5b9068a51\\selenium-devtools-v85-4.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-edge-driver\\4.29.0\\a332f0a9452efe144ee8d79816f9e19fe39e58b4\\selenium-edge-driver-4.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-firefox-driver\\4.29.0\\84fd20244c819e3c43a6a60b91491f2fac67cbc1\\selenium-firefox-driver-4.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-ie-driver\\4.29.0\\6191ff21cdfe40cb0f465f47fa73a121bbef00de\\selenium-ie-driver-4.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-safari-driver\\4.29.0\\e2af27470b441fb8f46f3b0ef1608cf825b2c996\\selenium-safari-driver-4.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-support\\4.29.0\\c1145dd6c8e1a5afd054affceab1249c05371b52\\selenium-support-4.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-chromium-driver\\4.29.0\\e792bead1460f1239bdf8ad319f8e3ca44fddf04\\selenium-chromium-driver-4.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-remote-driver\\4.29.0\\93a4b68a316657976882b4aa3745bf15c0be6c0\\selenium-remote-driver-4.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-manager\\4.29.0\\1e1800e980690f6642a3b9f705302f03fd070374\\selenium-manager-4.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-http\\4.29.0\\bfdb9d7a4a5686aef2ca1e1357437533c5305bf4\\selenium-http-4.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-json\\4.29.0\\29358392fe46e47a9b12411cb8ab4376af1d0f68\\selenium-json-4.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-os\\4.29.0\\2e7ab2c1b46c9002de68078fae3bbba8aeefb9e9\\selenium-os-4.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-api\\4.29.0\\a158a3d0aa2eb47270c0add15f6278891bfe390d\\selenium-api-4.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.jspecify\\jspecify\\1.0.0\\7425a601c1c7ec76645a78d22b8c6a627edee507\\jspecify-1.0.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\com.google.guava\\guava\\33.4.0-jre\\3fcc0a259f724c7de54a6a55ea7e26d3d5c0cac\\guava-33.4.0-jre.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\com.google.errorprone\\error_prone_annotations\\2.36.0\\227d4d4957ccc3dc5761bd897e3a0ee587e750a7\\error_prone_annotations-2.36.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.apache.commons\\commons-lang3\\3.17.0\\b17d2136f0460dcc0d2016ceefca8723bdf4ee70\\commons-lang3-3.17.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\commons-io\\commons-io\\2.18.0\\44084ef756763795b31c578403dd028ff4a22950\\commons-io-2.18.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\io.qameta.allure\\allure-test-filter\\2.29.0\\7de6b2c0271f8f67c743cdeabf6129a5cc385f1d\\allure-test-filter-2.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\io.qameta.allure\\allure-java-commons\\2.29.0\\f3ef14fd3e84e3f2c30a150bf8fd6b54372ba6d0\\allure-java-commons-2.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.apache.httpcomponents.client5\\httpclient5\\5.4.2\\d6a4248833d6d3d0e8ca318cd342826585bc1805\\httpclient5-5.4.2.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.slf4j\\slf4j-api\\2.0.16\\172931663a09a1fa515567af5fbef00897d3c04\\slf4j-api-2.0.16.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.opentest4j\\opentest4j\\1.3.0\\152ea56b3a72f655d4fd677fc0ef2596c3dd5e6e\\opentest4j-1.3.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\com.google.guava\\failureaccess\\1.0.2\\c4a06a64e650562f30b7bf9aaec1bfed43aca12b\\failureaccess-1.0.2.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\com.google.guava\\listenablefuture\\9999.0-empty-to-avoid-conflict-with-guava\\b421526c5f297295adef1c886e5246c39d4ac629\\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.checkerframework\\checker-qual\\3.43.0\\9425eee39e56b116d2b998b7c2cebcbd11a3c98b\\checker-qual-3.43.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\com.google.j2objc\\j2objc-annotations\\3.0.0\\7399e65dd7e9ff3404f4535b2f017093bdb134c7\\j2objc-annotations-3.0.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\com.github.valfirst.browserup-proxy\\browserup-proxy-core\\3.1.2\\b392a03ee19d0f920436bb997fa8ea347dfb73a6\\browserup-proxy-core-3.1.2.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\io.qameta.allure\\allure-model\\2.29.0\\9c3cee5f8a5b9448a647610111a61046604054b9\\allure-model-2.29.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\com.google.auto.service\\auto-service-annotations\\1.1.1\\da12a15cd058ba90a0ff55357fb521161af4736d\\auto-service-annotations-1.1.1.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\io.opentelemetry.semconv\\opentelemetry-semconv\\1.28.0-alpha\\90d4d4dc28153eed4af75759b610a1bf81b77b75\\opentelemetry-semconv-1.28.0-alpha.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\io.opentelemetry\\opentelemetry-exporter-logging\\1.46.0\\a0ef76a383a086b812395ca5a5cdf94804a59a3f\\opentelemetry-exporter-logging-1.46.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\io.opentelemetry\\opentelemetry-sdk-extension-autoconfigure\\1.46.0\\6b2e0222c1130da6005677394fe957e75a97d8f3\\opentelemetry-sdk-extension-autoconfigure-1.46.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\io.opentelemetry\\opentelemetry-sdk-extension-autoconfigure-spi\\1.46.0\\eb2081c3e8a3e73cab3c0c47ad8fb59e39216dc5\\opentelemetry-sdk-extension-autoconfigure-spi-1.46.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\io.opentelemetry\\opentelemetry-sdk\\1.46.0\\b3a77fff1084177c4f5099bbb7db6181d6efd752\\opentelemetry-sdk-1.46.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\io.opentelemetry\\opentelemetry-sdk-trace\\1.46.0\\c6e39faabf0741780189861156d0a7763e942796\\opentelemetry-sdk-trace-1.46.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\io.opentelemetry\\opentelemetry-sdk-metrics\\1.46.0\\475d900ffd0567a7ddf2452290b2e5d51ac35c58\\opentelemetry-sdk-metrics-1.46.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\io.opentelemetry\\opentelemetry-sdk-logs\\1.46.0\\1bd9bb4f3ce9ac573613b353a78d51491cd02bbd\\opentelemetry-sdk-logs-1.46.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\io.opentelemetry\\opentelemetry-sdk-common\\1.46.0\\1d353ee4e980ff77c742350fc7000b732b6c6b3f\\opentelemetry-sdk-common-1.46.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\io.opentelemetry\\opentelemetry-api-incubator\\1.46.0-alpha\\1a708444d2818ac1a47767a2b35d74ef55d26af8\\opentelemetry-api-incubator-1.46.0-alpha.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\io.opentelemetry\\opentelemetry-api\\1.46.0\\afd2d5781454088400cceabbe84f7a9b29d27161\\opentelemetry-api-1.46.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\io.opentelemetry\\opentelemetry-context\\1.46.0\\8cee1fa7ec9129f7b252595c612c19f4570d567f\\opentelemetry-context-1.46.0.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\net.bytebuddy\\byte-buddy\\1.15.11\\f61886478e0f9ee4c21d09574736f0ff45e0a46c\\byte-buddy-1.15.11.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.apache.httpcomponents.core5\\httpcore5-h2\\5.3.3\\72240efe9cf4683613f01bac5bca4fe6b06ba497\\httpcore5-h2-5.3.3.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.apache.httpcomponents.core5\\httpcore5\\5.3.3\\d6c702631841d1f3202c1f10973a98bab833fe23\\httpcore5-5.3.3.jar;C:\\IDEA\\Settings\\caches\\modules-2\\files-2.1\\org.apache.commons\\commons-exec\\1.4.0\\e9061b21958bfaf1cb736eb22e36cbf02d8fe9f\\commons-exec-1.4.0.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 132120576                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 536870912                                 {product} {command line}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 536870912                              {manageable} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-21
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;c:\packer;C:\ReverseEngineering\bin;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\Common Files\Autodesk Shared\;C:\Gradle\gradle-8.14.3\bin;C:\Tools\allure-2.36.0\bin;C:\Users\Валерий\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\Валерий\AppData\Local\Programs\Python\Python38-32\;C:\Users\Валерий\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\Валерий\AppData\Local\GitHubDesktop\bin;C:\Users\Валерий\AppData\Local\Programs\Git\cmd
+USERNAME=Valeriy
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 12, GenuineIntel
+TMP=C:\Users\40E4~1\AppData\Local\Temp
+TEMP=C:\Users\40E4~1\AppData\Local\Temp
+
+
+
+
+Periodic native trim disabled
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 17763 (10.0.17763.7009)
+OS uptime: 0 days 1:15 hours
+Hyper-V role detected
+
+CPU: total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 142 stepping 12 microcode 0xde, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, fma, vzeroupper, clflush, clflushopt, hv, rdtscp, f16c
+Processor Information for all 8 processors :
+  Max Mhz: 2304, Current Mhz: 1803, Mhz Limit: 1797
+
+Memory: 4k page, system-wide physical 8022M (1094M free)
+TotalPageFile size 10070M (AvailPageFile size 5M)
+current process WorkingSet (physical memory assigned to process): 9M, peak: 9M
+current process commit charge ("private bytes"): 17M, peak: 18M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (21.0.9+7-LTS-338) for windows-amd64 JRE (21.0.9+7-LTS-338), built on 2025-09-26T06:33:49Z by "mach5run" with MS VC++ 17.6 (VS2022)
+
+END.
