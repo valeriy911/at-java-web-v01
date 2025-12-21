@@ -1,4 +1,8 @@
+<<<<<<< HEAD:src/test/java/demo/part05/pages/LoginPage.java
 package demo.part05.pages;
+=======
+package demo.part07.pages;
+>>>>>>> 014f053c3a7cc9593f8e3a781ad1bf2fde02de85:src/test/java/demo/part07/pages/LoginPage.java
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
@@ -7,19 +11,11 @@ import io.qameta.allure.Step;
 
 public class LoginPage {
     SelenideElement
-            username,
-            password,
-            loginButton,
-            errorMessage,
-            greeting;
-
-    public LoginPage() {
-        username = $("#username");
-        password = $("#password");
-        loginButton = $("#loginButton");
-        errorMessage = $("#message");
+        username = $("#username"),
+        password = $("#password"),
+        loginButton = $("#loginButton"),
+        errorMessage = $("#message"),
         greeting = $("#greeting");
-    }
 
     @Step("Вход в систему")
     public void login(String username, String password) {
