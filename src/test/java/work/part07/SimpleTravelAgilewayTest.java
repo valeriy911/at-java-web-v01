@@ -1,6 +1,7 @@
 package work.part07;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import com.codeborne.selenide.Configuration;
@@ -66,6 +67,19 @@ public class SimpleTravelAgilewayTest {
         sleep(2000);
         $(By.className("translation_missing")).shouldHave(text("Heading New Staff"));
         // только вот к регистрации эта страница не имеет отношения :)
+    }
+
+    // 5.Страница Select Flight - проверка на изчезание поля ввода обратного рейса
+    // при выборе радиобаттона "One way"
+    @Test
+    void test04BackFlightHide() {
+        $(By.id("username")).sendKeys("agileway"); // логинимся и переходим на страницу выбора рейса
+        $(By.id("password")).setValue("test$W1se");
+        $(By.name("commit")).click();
+
+        $x("//input[@name='tripType' and @value='oneway']").click();
+        $(By.id("returnTrip")).shouldNot(visible);
+
     }
 
 }
