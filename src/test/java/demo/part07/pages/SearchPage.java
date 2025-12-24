@@ -1,8 +1,5 @@
-<<<<<<< HEAD:src/test/java/demo/part05/pages/SearchPage.java
-package demo.part05.pages;
-=======
 package demo.part07.pages;
->>>>>>> 014f053c3a7cc9593f8e3a781ad1bf2fde02de85:src/test/java/demo/part07/pages/SearchPage.java
+
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;

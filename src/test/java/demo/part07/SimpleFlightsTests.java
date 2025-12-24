@@ -30,6 +30,7 @@ public class SimpleFlightsTests {
         $("#username").setValue("standard_user");
         $("#password").setValue("WrongPassword");
         $("#loginButton").click();
+
         $("#message").shouldHave(text("Неверное имя пользователя или пароль."));
     }
 

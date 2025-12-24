@@ -2,15 +2,10 @@ package demo.part07;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
-<<<<<<< HEAD:src/test/java/demo/part05/POMFlightsTests.java
+
 import org.junit.jupiter.api.*;
-import demo.part05.FlightsListPage;
-import demo.part05.LoginPage;
-import demo.part05.RegistrationPage;
-import demo.part05.SearchPage;
 // ... Остальные импорты
-=======
->>>>>>> 014f053c3a7cc9593f8e3a781ad1bf2fde02de85:src/test/java/demo/part07/POMFlightsTests.java
+
 import com.codeborne.selenide.logevents.SelenideLogger;
 import demo.part07.pages.FlightsListPage;
 import demo.part07.pages.LoginPage;
@@ -18,6 +13,7 @@ import demo.part07.pages.RegistrationPage;
 import demo.part07.pages.SearchPage;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
+
 
 
 @TestMethodOrder(MethodOrderer.DisplayName.class)
