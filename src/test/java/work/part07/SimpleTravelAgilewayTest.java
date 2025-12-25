@@ -72,7 +72,7 @@ public class SimpleTravelAgilewayTest {
     // 5.Страница Select Flight - проверка на изчезание поля ввода обратного рейса
     // при выборе радиобаттона "One way"
     @Test
-    void test04BackFlightHide() {
+    void test05BackFlightHide() {
         $(By.id("username")).sendKeys("agileway"); // логинимся и переходим на страницу выбора рейса
         $(By.id("password")).setValue("test$W1se");
         $(By.name("commit")).click();
@@ -81,6 +81,56 @@ public class SimpleTravelAgilewayTest {
         $(By.id("returnTrip")).shouldNot(visible);
 
     }
+
+    // 6.Страница Select Flight - при заполнении всех параметров рейса
+    // внизу должна появиться таблица с предложенными вариантами рейсов
+    @Test
+    void test06FlightTableShow() {
+        $(By.id("username")).sendKeys("agileway"); // логинимся и переходим на страницу выбора рейса
+        $(By.id("password")).setValue("test$W1se");
+        $(By.name("commit")).click();
+
+        Configuration.pageLoadStrategy = "eager";
+        $(By.name("fromPort")).selectOption(1); // Выбираем Нью-йщрк из списка From:
+        $(By.name("fromPort")).selectOption(2); // Выбираем Сидней из списка To:
+        // выбираем дату отлета
+        $(By.id("departDay")).selectOption(1);  // выбираем 01 из списка Departing:
+        $(By.id("departMonth")).selectOption("Feburary 2025");  // выбираем дату обратного рейса
+        // выбираем дату обратного рейса
+        $(By.id("returnDay")).selectOption(3);
+        $(By.id("returnMonth")).selectOption("March 2025");
+       // $(By.tagName("input")).click();
+        sleep(5000);
+
+        $(By.id("flights")).shouldBe(visible); // и тут должна появиться таблица с вариантами рейсов
+    }
+
+    // 7. Переход на страницу Passenger Details - заполняются все поля формы на
+    // странице Select Flight, выбирается авиакомпания  из таблицы и давится кнопка Continue
+    @Test
+    void test07GoToPassengerDetailsPage() {
+        $(By.id("username")).sendKeys("agileway"); // логинимся и переходим на страницу выбора рейса
+        $(By.id("password")).setValue("test$W1se");
+        $(By.name("commit")).click();
+
+        Configuration.pageLoadStrategy = "eager";
+
+        $(By.name("fromPort")).selectOption(1);  // выбираем пункты назначения
+        $(By.name("fromPort")).selectOption(2);
+        $(By.id("departDay")).selectOption(1);   // выбираем даты полетов
+        $(By.id("departMonth")).selectOption("Feburary 2025");
+        $(By.id("returnDay")).selectOption(3);
+        $(By.id("returnMonth")).selectOption("March 2025");
+
+        // выбираем рейс из списка (2-й, Virgin Australia)
+        //$x("//input[@type='checkbox'][2]").click();
+        //$(By.tagName("input")).click();
+        // но я так  и не нашел спооб нажать на чекбокс :((((
+
+        $x("//input[@value='Continue']").click();// давим не кнопку "Continue"
+        $(By.tagName("h2")).shouldHave(text("Passenger Details"));
+    }
+
 
 }
 

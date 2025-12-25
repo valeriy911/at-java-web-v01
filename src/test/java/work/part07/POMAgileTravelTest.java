@@ -83,4 +83,28 @@ public class POMAgileTravelTest {
         selectFlightPage.oneWaySuccessful();
     }
 
+    // 6.Страница Select Flight - при заполнении всех параметров рейса
+    // внизу должна появиться таблица с предложенными вариантами рейсов
+    @Test
+    void test06FlightTableShow(){
+        LoginPage loginPage = new LoginPage(); // логинимся и переходим на страницу выбора рейса
+        loginPage.login("agileway", "test$W1se");
+
+        SelectFlightPage selectFlightPage = new SelectFlightPage(); //выбираем рейсы
+        selectFlightPage.chooseFlight();
+        selectFlightPage.flightTableShowing(); //проверяем видна ли таблица вариантов рейса
+    }
+
+    // 7. Переход на страницу Passenger Details - заполняются все поля формы на
+    // странице Select Flight, выбирается авиакомпания  из таблицы и давится кнопка Continue
+    @Test
+    void test07GoToPassengerDetailsPage(){
+        test06FlightTableShow(); // перевые шаги как в предыдущем тесте
+        $x("//input[@value='Continue']").click(); // а потом давим не кнопку "Continue"
+
+        PassengerDetailsPage passDetailPage = new PassengerDetailsPage(); // роверка перехода на страницу
+        passDetailPage.checkPassengerDetailsPage();
+    }
+
+
 }
